@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="email-verification.css">
+    <link rel="icon" href="images/logo2.png">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">BornToLaugh</div>
+    </div>
+    <div class="verify-container">
+        <img src="images/email-icon.webp" alt="email-icon">
+        <div class="text-1">Please Verify Your Email!</div>
+        <div class="text-2">You're almost there, we sent an email to <span class="email-id"></span></div>
+        <div class="text-3">Click on the link in the email to complete Registeration.</div>
+        <div class="message"></div>
+        <div class="btns">
+            <button onclick="resend()" class="resent-btn btn">Resend</button>
+            <button onclick="reload()" class="comfirm-btn btn">Comfirm</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-copy">&copy; quickSnails&trade; 2024</div>
+    </div>
+
+    <script src="firebase.js"></script>
+    <script src="email.js"></script>
+    
+</body>
+</html>

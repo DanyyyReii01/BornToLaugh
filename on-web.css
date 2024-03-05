@@ -1,0 +1,61 @@
+:root {
+    --yellow : #ffc567;
+    --pink : #fb7da8;
+    --orange : #fd5a46;
+    --purple : #552cb7;
+    --green : #00995e;
+    --blue : #058cd7;
+    --black : black;
+    --white : white;
+    --ho-yellow : #ffc567;
+    --ho-pink : #fb7da8;
+    --ho-orange : #fd5a46;
+    --ho-purple : #552cb7;
+    --ho-green : #00995e;
+    --ho-blue : #058cd7;
+    --ho-black : black;
+    --ho-white : white;
+    --bo-white : white;
+}
+
+.on-web {
+    max-width: 100%;
+    flex: 1;
+    background-color: var( --pink);
+    border-radius: 20px;
+    border: 2px solid var(--bo-white);
+    padding: 10px;
+    overflow: hidden;
+}
+
+.on-web-text {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding-left: 20px;
+    color: var(--black);
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+}
+
+.tn-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: none;
+}
+
+.display-slide {
+    display: block;
+}

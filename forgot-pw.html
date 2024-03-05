@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recover Password</title>
+    <link rel="icon" href="images/logo2.png">
+    <link rel="stylesheet" href="forgot-pw.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">BornToLaugh</div>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+            <div class="text1">Password Recovery</div>
+            <div class="text2 text">Forgot your password?</div>
+            <div class="text3 text">Please enter your email address!</div>
+            <div class="text4 text">You will recieve a link to create new password.</div>
+            <div class="email-input-contianer input-container">
+                <input type="text" class="email-input" id="re-email-input" required>
+                <label for="re-email-input">Email</label>
+                <ion-icon name="mail-outline" class="icon"></ion-icon>
+            </div>
+            <div class="alert-container"></div>
+            <button class="forgot-pw-btn">Request Password Recover</button>
+            <a class="b-to-login" href="login-page.html">Back to Login</a>
+        </div>
+    </div>
+        <div class="footer">
+        <div class="footer-copy">&copy; quickSnails&trade; 2024</div>
+    </div>
+
+
+    <script src="firebase.js"></script>
+    <script src="forgot-pw.js"></script>
+</body>
+</html>

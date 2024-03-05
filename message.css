@@ -1,0 +1,125 @@
+* {
+    transition: all 0.2s ease;
+}
+
+:root {
+    --yellow : #ffc567;
+    --pink : #fb7da8;
+    --orange : #fd5a46;
+    --purple : #552cb7;
+    --green : #00995e;
+    --blue : #058cd7;
+    --black : black;
+    --white : white;
+    --ho-yellow : #ffc567;
+    --ho-pink : #fb7da8;
+    --ho-orange : #fd5a46;
+    --ho-purple : #552cb7;
+    --ho-green : #00995e;
+    --ho-blue : #058cd7;
+    --ho-black : black;
+    --ho-white : white;
+    --bo-white : white;
+    --bo-black : black;
+}
+
+.messenger {
+    display: flex;
+    overflow-y: auto;
+    padding: 20px;
+    height: 45%;
+    border: 3px solid var(--bo-white);
+    border-radius: 20px;
+    background-color: var(--orange);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-container {
+    background-color: var(--green);
+    align-self: flex-start;
+    height: 92%;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    display: none;
+}
+
+.friends-chat-button {
+    width: 90%;
+    background-color: transparent;
+    padding-top: 5px;
+    color: var(--black);
+    border: 1px solid var(--bo-black);
+    border-radius: 5px;
+    padding-bottom: 3px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.friends-chat-button:hover {
+    background-color: var(--black);
+    color: var(--ho-white);
+    border: 1px solid var(--white);
+}
+
+.message-text {
+    font-size: 1.1em;
+    padding-left: 5px;
+    margin-top: 5px;
+    color: var(--black);
+}
+
+.message-input {
+    position: fixed;
+    bottom: 15px;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    left: 20px;
+    color: black;
+}
+
+.message-input::placeholder {
+    color: black;
+}
+
+.message-send-btn {
+    position: fixed;
+    bottom: 15px;
+    padding: 5px 10px 5px 10px;
+    right: 20px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.message-send-btn:hover {
+    background-color: var(--orange);
+    color: var(--black);
+}
+
+.message-here-text {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.open-chat-text {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.messenger-container {
+    display: none;
+}

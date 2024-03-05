@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BornToLaugh</title>
+    <link rel="icon" href="images/logo2.png">
+    <link rel="stylesheet" href="login-page.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">BornToLaugh</div>
+        <div class="header-links">
+            <a href="#">About Us</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="log-in-pad">
+            <div class="welcome-title">Welcome To BornToLaugh</div>
+            <div class="log-in-title">Log In</div>
+            <div class="email-input-contianer input-container">
+                <input type="text" class="log-email-input" id="l-email-input" required>
+                <label for="l-email-input">Email</label>
+                <ion-icon name="mail-outline" class="icon"></ion-icon>
+            </div>
+            <div class="pw-input-container input-container">
+                <input type="password" class="log-pw-input" id="l-pw-input" required>
+                <label for="l-pw-input">Password</label>
+                <ion-icon name="lock-closed-outline" class="icon"></ion-icon>
+            </div>
+            <div class="log-alert-container"></div>
+            <button type="submit" class="log-in-btn">Log In</button>
+            <a href="forgot-pw.html" class="forgot-pw">Forgot Password?</a>
+            <div class="register-text">Don't you have an account? <a class="register-link" href="#">Register</a></div>
+        </div>
+
+        <div class="register-pad">
+            <div class="welcome-title">Welcome To BornToLaugh</div>
+            <div class="register-title">Register</div>
+            <div class="username-input-contianer input-container">
+                <input type="text" class="reg-username-input" id="r-username-input" required>
+                <label for="r-username-input">Username</label>
+                <ion-icon name="person-outline" class="icon"></ion-icon>
+            </div>
+            <div class="email-input-contianer input-container">
+                <input type="text" class="reg-email-input" id="r-email-input" required>
+                <label for="r-email-input">Email</label>
+                <ion-icon name="mail-outline" class="icon"></ion-icon>
+            </div>
+            <div class="pw-input-container input-container">
+                <input type="password" class="reg-pw-input" id="r-pw-input" required>
+                <label for="r-pw-input">Password</label>
+                <ion-icon name="lock-closed-outline" class="icon"></ion-icon>
+            </div>
+            <div class="re-pw-input-container input-container">
+                <input type="password" class="reg-re-pw-input" id="r-re-pw-input" required>
+                <label for="r-re-pw-input">Re-Password</label>
+                <ion-icon name="lock-closed-outline" class="icon"></ion-icon>
+            </div>
+            <div class="reg-alert-container"></div>
+            <button class="register-btn">Register</button>
+            <div class="log-in-text">Already have an account? <a class="log-in-link" href="#">Log in</a></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-copy">&copy; quickSnails&trade; 2024</div>
+    </div>
+
+    <script src="login-page.js"></script>
+    <script src="firebase.js"></script>
+    
+</body>
+</html>

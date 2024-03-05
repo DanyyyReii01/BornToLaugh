@@ -1,0 +1,137 @@
+:root {
+    --yellow : #ffc567;
+    --pink : #fb7da8;
+    --orange : #fd5a46;
+    --purple : #552cb7;
+    --green : #00995e;
+    --blue : #058cd7;
+    --black : black;
+    --white : white;
+    --ho-yellow : #ffc567;
+    --ho-pink : #fb7da8;
+    --ho-orange : #fd5a46;
+    --ho-purple : #552cb7;
+    --ho-green : #00995e;
+    --ho-blue : #058cd7;
+    --ho-black : black;
+    --ho-white : white;
+    --bo-black : black;
+    --bo-white : white;
+}
+
+.profile-content {
+    width: 100%;
+    height: 450px;
+}
+
+.profile-card {
+    border: 3px solid var(--bo-white);
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/loader1.gif);
+}
+
+.profile-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    color: var(--black);
+}
+
+.pf-img {
+    object-fit: cover;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.pf-img-card {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.pf-img-upload-icon {
+    position: absolute;
+    left: 160px;
+    bottom: 28px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+}
+
+.pf-img-upload-icon:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+.pf-img:hover {
+    border: 3px solid white;
+}
+
+.pf-username {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.pf-wallpaper-upload-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 2em;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.pf-wallpaper-upload-icon:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+}
+
+#pf-wallpaper-input {
+    visibility: hidden;
+}
+
+#pf-img-input {
+    visibility: hidden;
+}
+
+.wallpaper-upload-percentage {
+    position: absolute;
+    color: white;
+    bottom: 21px;
+    right: 55px;
+    font-size: 0.8em;
+    visibility: hidden;
+}
+
+.pf-upload-percentage {
+    position: absolute;
+    color: white;
+    bottom: 40px;
+    right: 110px;
+    font-size: 0.8em;
+    visibility: hidden;
+}
+
+.nav-profile-content {
+    display: none;
+}

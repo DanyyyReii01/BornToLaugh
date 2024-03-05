@@ -1,0 +1,125 @@
+:root {
+    --yellow : #ffc567;
+    --pink : #fb7da8;
+    --orange : #fd5a46;
+    --purple : #552cb7;
+    --green : #00995e;
+    --blue : #058cd7;
+    --black : black;
+    --white : white;
+    --ho-yellow : #ffc567;
+    --ho-pink : #fb7da8;
+    --ho-orange : #fd5a46;
+    --ho-purple : #552cb7;
+    --ho-green : #00995e;
+    --ho-blue : #058cd7;
+    --ho-black : black;
+    --ho-white : white;
+    --bo-white : white;
+}
+
+.upload-content {
+    bottom: -240px;
+    width: 60%;
+    position: absolute;
+    z-index: 10000;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all 0.3s ease;
+    align-items: center;
+    background-color: var(--orange);
+    border-radius: 30px;
+    border: 3px solid var(--bo-white);
+}
+
+.upload-file-input {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.upload-textarea {
+    margin-top: 13px;
+    width: 90%;
+    font-weight: bold;
+    resize: none;
+    border: 2px solid var(--black);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 4px;
+    font-size: 1.1em;
+    color: var(--black);
+    background-color: var(--yellow);
+}
+
+.upload-textarea::placeholder {
+    color: var(--black)
+}
+
+.image-upload {
+    display: none;
+}
+
+.upload-file-input label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+    border: 2px solid var(--black);
+    padding: 0;
+    height: 100%;
+    font-size: 20px;
+    border-radius: 20px;
+    color: var(--black);
+    background-color: var(--pink);
+}
+
+.create-post-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border: 2px solid var(--black);
+    size: 10px;
+    border-radius: 20px;
+    color: var(--black);
+    background-color: var(--pink);
+}
+
+.upload-percentage {
+    color: var(--black);
+    visibility: hidden;
+    transition: all 0.1s ease;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+.upload-done {
+    color: var(--black);
+    visibility: hidden;
+    transition: all 0.1s ease;
+    font-weight: bold;
+}
+
+.uploaded-msg {
+    color: var(--black);
+    visibility: hidden;
+    transition: all 0.1s ease;
+    margin-left: 205px;
+    font-weight: bold;
+}
+
+.upload-condition-show {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

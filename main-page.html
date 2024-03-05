@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BornToLaugh</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <link rel="icon" href="images/logo2.png">
+
+    <link rel="stylesheet" href="main-page.css">
+    <link rel="stylesheet" href="create-post.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="friends.css">
+    <link rel="stylesheet" href="message.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="on-web.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <div class="top-logo">BornToLaugh</div>
+    <div class="nav-bar">
+        <div class="nav-sec1">
+            <div class="nav-logo">BornToLaugh</div>
+        </div>
+
+        <div class="nav-sec2">
+            <ion-icon class="nav-icon sec2-icon all-post-icon active-feed" name="globe-outline"></ion-icon>
+            <ion-icon class="nav-icon sec2-icon image-post-icon" name="image-outline"></ion-icon>
+            <ion-icon class="nav-icon sec2-icon video-post-icon" name="videocam-outline"></ion-icon>
+        </div>
+        <div class="nav-sec3">
+            <div class="messenger-container">
+                <ion-icon class="nav-icon sec3-icon messenger-icon" name="chatbubbles-outline"></ion-icon>
+                <div class="nav-messenger-content">
+                    <div class="nav-friends-users"></div>
+                    <div class="nav-messenger">
+                        <div class="nav-chat-container"></div> 
+                        <div class="nav-chat-text">
+                            Open One Of The Chats To Connect With Users.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-container">
+                <ion-icon class="nav-icon sec3-icon profile-icon" name="person-outline"></ion-icon>
+                <div class="nav-profile-content">
+                </div>
+            </div>
+
+            <div class="upload-container">
+                <ion-icon class="nav-icon sec3-icon upload-icon" name="add-outline"></ion-icon>
+            </div>
+            <div class="setting-container">
+                <ion-icon class="nav-icon sec3-icon setting-icon" name="settings-outline"></ion-icon>
+                <div class="setting-content">
+                    <div class="logout-icon"  onclick="logout()">
+                        <ion-icon class="logout-ion-icon" name="exit-outline" ></ion-icon>
+                        Logout
+                    </div>
+                    <div class="b-w-theme"> 
+                        <ion-icon class="b-w-icon" name="sparkles-outline"></ion-icon>
+                        Black and White
+                    </div>
+                    <div class="retro-theme">
+                        <ion-icon class="retro-icon" name="sparkles-outline"></ion-icon>
+                        Retro
+                    </div>
+                    <div class="energy-theme">
+                        <ion-icon class="energy-icon" name="sparkles-outline"></ion-icon>
+                        Energy
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="main-sec1">
+            <div class="profile-text">
+                Profile.
+            </div>
+            <div class="profile-content">
+                    <div class="profile-card">
+                        <div class="pf-wallpaper-container">
+                            <div class="pf-wallpaper-upload">
+                                <input type="file" name="pf-wallpaper-input" id="pf-wallpaper-input" onchange="changePfWallpaper(event)">
+                                <label for="pf-wallpaper-input">
+                                    <ion-icon class="pf-wallpaper-upload-icon" name="arrow-up-circle-outline"></ion-icon>
+                                </label>  
+                                <div class="wallpaper-upload-percentage">0%</div>
+                            </div>
+                        </div>
+                            
+                        <div class="pf-img-container">
+                            <div class="pf-img-card">
+                                <img class="pf-img" src="images/profile.jpg" alt="profile-image">
+                                <div class="pf-img-upload">
+                                    <input type="file" name="pf-img-input" id="pf-img-input"
+                                    onchange="changePfImage(event)">
+                                    <label for="pf-img-input">
+                                        <ion-icon class="pf-img-upload-icon" name="aperture-outline"></ion-icon>
+                                    </label>
+                                    <div class="pf-upload-percentage">0%</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="pf-username">
+                            Danyyy
+                        </div>
+                    </div>
+            </div>
+            <div class="on-web-text">
+                On Web.
+            </div>
+            <div class="on-web">
+                <div class="slider">
+                    <div class="slides">
+                        <a target="_blank" class="tn-link" href="https://youtu.be/TJZSER2f-Gc?si=NEuFJcxTmi2ngBBt"><img class="tn-img" src="thumbnails/tn-1.jpg" alt=""></a>
+                        <a target="_blank" class="tn-link" href="https://youtu.be/C8-I1CRqyDI?si=jl33_9xndqC_er50"><img class="tn-img" src="thumbnails/tn-2.jpg" alt=""></a>
+                        <a target="_blank" class="tn-link" href="https://youtu.be/zH9PHEQe7q8?si=yJt3Cav5vi89Ve9t"><img class="tn-img" src="thumbnails/tn-3.jpg" alt=""></a>
+                        <a target="_blank" class="tn-link" href="https://youtu.be/D7RfSiB3k5s?si=w-r4K17-uy_V6K3y"><img class="tn-img" src="thumbnails/tn-4.jpg" alt=""></a>
+                        <a target="_blank" class="tn-link" href="https://youtu.be/45VWTm3ldJ8?si=wxE8yRoB4bKcB6uI"><img class="tn-img" src="thumbnails/tn-5.jpg" alt=""></a>
+                        <a target="_blank" class="tn-link" href="https://youtu.be/nEFlyPH1lpI?si=IDoO-Fuyy_j4nrsT"><img class="tn-img" src="thumbnails/tn-6.jpg" alt=""></a>
+                        <a target="_blank" class="tn-link" href="https://youtu.be/268scEdtxYw?si=RIhmcn81uCD1Wy8B"><img class="tn-img" src="thumbnails/tn-7.jpg" alt=""></a>
+                        <a target="_blank" class="tn-link" href="https://youtu.be/e0RxgTVa2qI?si=pEKhQBqKHTdaXHR9"><img class="tn-img" src="thumbnails/tn-8.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-sec2">
+            <div class="sec2-pf-upload">
+                <div class="pf-upload-header">
+                    <div class="pf-upload-show">
+                        <img class="sec2-pf-img" src="images/profile.jpg" alt="your profile picture">
+                        <button class="sec2-upload-link">
+                        What you think what is funny?
+                        </button>
+                    </div>
+                </div>
+                <div class="upload-content">
+                    <textarea name="upload-t-a" class="upload-textarea" id="upload-text-area" cols="30" rows="5" placeholder="what you think what is funny!"></textarea>
+                    <div class="upload-file-input">
+                        <input type="file" name="image-upload" class="image-upload" id="nav-image-upload"
+                        onchange="uploading(event)"/>
+
+                        <label for="nav-image-upload"><ion-icon class="image-upload-icon" name="attach-outline"></ion-icon></label>
+
+                        <div class="create-post-icon">
+                            <ion-icon name="arrow-up-outline"></ion-icon>
+                        </div>
+                        
+                    </div>
+                    <div class="upload-condition-show">
+                        <div class="upload-percentage">0%</div>
+                        <div class="upload-done">Done</div>
+                        <div class="uploaded-msg">Uploaded</div>
+                    </div>
+                    </div>
+            </div>
+            <div class="sec2-feed-text">
+                <div class="all-feed">
+                    Feed.
+                </div>
+                <div class="image-feed">
+                    Images.
+                </div>
+                <div class="video-feed">
+                    Videos.
+                </div>
+            </div>
+            <div class="sec2-all-post-container">
+                <div class="post-loading-text">
+                    <img src="images/waitaminute.gif" alt="">
+                </div>
+            </div>
+            <div class="sec2-video-post-container">
+            </div>
+            <div class="sec2-image-post-container">
+            </div>
+
+        </div>
+        <div class="main-sec3">
+            <div class="active-users-text">
+                Active Users.
+            </div>
+            <div class="friends-users">
+            </div>
+            <div class="message-here-text">
+                Message Here.
+            </div>
+            <div class="messenger">
+                <div class="chat-container"></div> 
+                <div class="open-chat-text">
+                    Open One Of The Chats To Connect With Users.
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+
+    <script src="firebase.js"></script>
+    <script src="create-post.js"></script>
+    <script src="main-page.js" defer></script>
+    <script src="profile.js" defer></script>
+    <script src="freinds.js"></script>
+    <script src="video-page.js"></script>
+    <script src="image-page.js"></script>
+    <script src="on-web.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+*{
+    transition: all 0.3s ease;
+}
+
+:root {
+    --yellow : #ffc567;
+    --pink : #fb7da8;
+    --orange : #fd5a46;
+    --purple : #552cb7;
+    --green : #00995e;
+    --blue : #058cd7;
+    --black : black;
+    --cyan : #04a8b4;
+    --white : white;
+    --ho-yellow : #ffc567;
+    --ho-pink : #fb7da8;
+    --ho-orange : #fd5a46;
+    --ho-purple : #552cb7;
+    --ho-green : #00995e;
+    --ho-blue : #058cd7;
+    --ho-black : black;
+    --ho-white : white;
+    --bo-white : white;
+    --bo-black : black;
+}
+
+.friends-user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--bo-black);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: var(--pink);
+}
+
+.friends-user-img-div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 40px;
+    border: 1px solid var(--bo-white);
+}
+
+.friends-user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.friends-users {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 10px 0px 20px;
+    border: 3px solid var(--bo-white);
+    border-radius: 20px;
+    background-color: var(--green);
+}
+
+.friends-user-header-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.friends-user-data-div {
+    text-align: center;
+    margin-right: 40px;
+}
+
+.friends-user-name {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--black);
+}
+
+.friends-signup-date {
+    font-size: 13px;
+    margin: 0;
+    color:var(--black);
+}
+
+.friends-user-pf-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+    z-index: 100;
+    bottom: -200px;
+    height: 200px;    
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    transform-origin: top;
+    transform: scaleY(0);
+    border: 1px solid var(--black);
+}
+
+.friends-user-pf-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-left: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--black);
+}
+
+.friends-user-pf-name {
+    margin-right: 30px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.3em
+}
+
+.friends-dropdown-show {
+    color: var(--black);
+}
+
+.friends-dropdown-hide {
+    display: none;
+    color: var(--black);
+}
+
+.active-users-text {
+    color: var(--black);
+}
